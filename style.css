@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 90px;
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 20px;
+  color: #ffffff;
+  position: relative;
+  letter-spacing: -0.5px;
+}
+
+.header__logo h1::after {
+  content: "*";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  color: #f06c64;
+}
+
+.navigation {
+  display: flex;
+  padding-top: 10px;
+}
+
+.navigation li {
+  padding-left: 28px;
+  letter-spacing: 0.03px;
+  color: #ffffff;
+  list-style-type: none;
+  font-size: 12px;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+}
+
+.navigation a.bullet::before {
+  position: absolute;
+  content: "";
+  width: 3px;
+  height: 3px;
+  left: -15px;
+  top: 7px;
+  border-radius: 50%;
+  background-color: #404455;
+}
+
+.navigation a:hover {
+  color: #f06c64;
+}
+
+.navigation li:first-child {
+  color: #f06c64;
+}
+
+.slider {
+  height: 595px;
+  background-color: #f06c64;
+  border-bottom: 5px solid #ea676b;
+  position: relative;
+}
+
+.slider__iphone-vertical {
+  position: absolute;
+  width: 245px;
+  height: 579px;
+  top: -17px;
+  left: 110px;
+}
+
+.slider__iphone-horizontal {
+  position: absolute;
+  width: 550px;
+  height: 355px;
+  top: 69px;
+  left: 360px;
+}
+
+.slider__left-button {
+  position: absolute;
+  width: 16px;
+  height: 27px;
+  top: 281px;
+  left: 42px;
+  background-image: url("./assets/img/chev-left.png");
+  cursor: pointer;
+}
+
+.slider__left-button:hover {
+  background-image: url("./assets/img/chev-left-black.png");
+}
+
+.slider__right-button {
+  position: absolute;
+  width: 16px;
+  height: 27px;
+  top: 281px;
+  right: 40px;
+  background-image: url("./assets/img/chev-right.png");
+  cursor: pointer;
+}
+
+.slider__right-button:hover {
+  background-image: url("./assets/img/chev-right-black.png");
+}
+
+.services {
+  height: 495px;
+  max-width: 1020px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+  padding: 0 30px;
+  text-align: justify;
+  overflow: hidden;
+}
+
+.services__article {
+  max-height: 40px;
+  overflow: hidden;
+  padding: 57px 0 0 10px;
+  font-size: 30px;
+  line-height: 40px;
+  color: #666d89;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.services__description {
+  max-height: 60px;
+  overflow: hidden;
+  margin: 16px 0 45px;
+  padding: 0 10px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+
+.layout-3-column {
+  display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.service {
+  margin-bottom: 29px;
+  width: 319px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.service__icon {
+  margin: 0 10px;
+}
+
+.service__description {
+  margin: 0 10px;
+  text-align: justify;
+  max-height: 94px;
+}
+
+.service__description div {
+  max-height: 18px;
+  font-size: 19px;
+  line-height: 18px;
+  color: #666d89;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin-bottom: 10px;
+  letter-spacing: -0.6px;
+}
+
+.service__description span {
+  font-size: 12px;
+  line-height: 22px;
+  color: #767e9e;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+
+
+
+.portfolio {
+  border-bottom: 6px solid #323746;
+  padding: 0 40px 47px;
+  background-color: #2d303a;
+}
+
+.portfolio__article {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  color: #767e9e;
+  font-size: 30px;
+  margin-bottom: 22px;
+  padding-top: 59px;
+}
+
+.portfolio__links {
+  margin: 14px 0 19px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #767e9e;
+}
+
+.portfolio p,
+.about-us p {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: #767e9e;
+}
+
+.link {
+  display: inline-block;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 4px 6px 4px;
+  margin: 0 7px 0 0;
+  letter-spacing: 0.05px;
+  cursor: pointer;
+}
+
+.last-element {
+  letter-spacing: -0.2px;
+}
+
+.selected {
+  color: #dedede;
+}
+
+.link:first-child {
+  margin-left: 1px;
+}
+
+.layout-4-column {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 621px;
+  overflow: hidden;
+}
+
+.layout-4-column img {
+  margin-bottom: 20px;
+}
+
+.about-us__article {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  color: #767e9e;
+  font-size: 30px;
+  padding: 59px 0 18px;;
+}
+
+.about-us {
+  padding: 0 40px 61px;
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+}
+
+.about-us p {
+  padding-bottom: 45px;
+  line-height: 1.9rem;
+  text-align: justify;
+}
+
+.about-us h3 {
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 900;
+  color: #767e9e;
+  padding-top: 13px;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+  height: 18px;
+  overflow: hidden;
+}
+
+.about-us__employee:first-child {
+  margin: 0 19px 0 0;
+}
+
+.about-us__employee:nth-child(2) {
+  margin: 0 21px 0 0;
+}
+
+.about-us__employee p {
+  font-size: 12px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #767e9e;
+  text-align: justify;
+  letter-spacing: -0.08px;
+  padding-bottom: 20px;
+}
+
+.about-us__employee a {
+  margin-right:1px;
+}
+
+
+
+
+.contacts h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 18px;
+  letter-spacing: -0.16px;
+}
+
+.contacts h3 {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 0.8em;
+  margin-top: 2px;
+  margin-bottom: 12px;
+  letter-spacing: -0.06px;
+}
+
+.contacts {
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+  padding: 60px 40px 13px;
+  color: #f0d8d9;
+  font-family: "Lato", sans-serif;
+}
+
+.contacts p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: justify;
+  line-height: 30px;
+}
+
+.contacts-column {
+  display: flex;
+  margin-top: 44px;
+}
+
+.contacts-column button {
+  padding: 10px 14px;
+  margin-top: 14px;
+  display: block;
+  background-color: transparent;
+  color: #f0d8d9;
+  border: 1px solid #f0d8d9;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.contacts-column button:hover {
+  background-color: #f0d8d9;
+  color: #ea676b;
+}
+
+.contacts-column input {
+  width: 619px;
+  padding: 11px 15px 12px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;  
+}
+
+.textarea {
+  width: 619px;
+  max-height: 202px;
+  resize: none;
+  padding: 10px 15px 12px;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;
+}
+
+::placeholder {
+  color: #f48c8f;
+}
+
+.contacts-column__form {
+  max-width: 619px;
+  margin-right: 21px;
+}
+
+.contacts-column__information p {
+  font-size: 12px;
+  line-height: 21px;
+  font-weight: normal;
+  text-align: start;
+}
+
+.tel,
+.email {
+  display: block;
+}
+
+.tel {
+  color: #f0d8d9;
+  text-decoration: none;
+  font-size: 12px;
+  padding-left:23px;
+  line-height: 22px;
+  margin-top: -0.07em;
+  background: transparent url(assets/img2/icon-phone.svg) no-repeat left center;
+}
+
+.email {
+  text-decoration: none;
+  color: #f0d8d9;
+  line-height: 22px;
+  font-size: 12px;
+  padding-left:23px;
+  background: transparent url(assets/img2/icon-email.svg) no-repeat left 7px;
+}
+
+.address {
+  margin-block-start: 0;
+  padding-left:23px;
+  margin-top: 24px;
+  background: transparent url(assets/img2/icon-location.svg) no-repeat 3px center;
+}
+
+
+.footer {
+  background-color: #2D303A;
+  padding: 22px 38px 19px 42px;
+}
+
+.footer-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+  color: #666d89;
+  margin-top: -8px;
+  font-weight: normal;
+  letter-spacing: -0.1px;
+}
+
+.icons-footer {
+  margin-top: -1px;
+}
+
+.icons-footer a {
+  margin-left: 1px;
+}
+
+
