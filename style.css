@@ -254,8 +254,6 @@
 }
 
 
-
-
 .portfolio {
   padding: 0 40px 47px;
 
@@ -341,7 +339,7 @@
 
   padding: 59px 0 18px;
 
-  color: #767e9e;;
+  color: #767e9e;
 }
 
 .about-us {
@@ -402,8 +400,6 @@
 .about-us__employee a {
   margin-right: 1px;
 }
-
-
 
 
 .contacts h2 {
@@ -534,7 +530,7 @@
   text-decoration: none;
 
   color: #f0d8d9;
-  background: transparent url(assets/img2/icon-phone.svg) no-repeat left center;
+  background: transparent url("assets/img2/icon-phone.svg") no-repeat left center;
 }
 
 .email {
@@ -546,14 +542,14 @@
   text-decoration: none;
 
   color: #f0d8d9;
-  background: transparent url(assets/img2/icon-email.svg) no-repeat left 7px;
+  background: transparent url("assets/img2/icon-email.svg") no-repeat left 7px;
 }
 
 .address {
   margin-top: 24px;
   padding-left: 23px;
 
-  background: transparent url(assets/img2/icon-location.svg) no-repeat 3px center;
+  background: transparent url("assets/img2/icon-location.svg") no-repeat 3px center;
 }
 
 
