@@ -488,7 +488,7 @@
 
   box-sizing: border-box;
   width: 619px;
-  max-height: 202px;
+  height: 202px;
   padding: 10px 15px 12px;
 
   resize: none;
