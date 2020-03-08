@@ -188,6 +188,7 @@
 }
 
 .service__description div {
+  overflow: hidden;
   max-height: 18px;
   font-size: 19px;
   line-height: 18px;
@@ -300,12 +301,14 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 900;
+  max-width: 300px;
   color: #767e9e;
   padding-top: 13px;
   letter-spacing: -0.2px;
   margin-bottom: 10px;
   height: 18px;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .about-us__employee:first-child {
@@ -425,7 +428,7 @@
   font-size: 12px;
   line-height: 21px;
   font-weight: normal;
-  text-align: start;
+  text-align: justify;
 }
 
 .tel,
