@@ -6,6 +6,7 @@
     <title>Singolo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <script src='script.js'></script>
   </head>
 <body>
   <div class="wrapper">
@@ -15,28 +16,30 @@
       </div>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li><a href="#">HOME</a></li>
-          <li><a class="bullet" href="#">SERVICES</a></li>
-          <li><a class="bullet" href="#">PORTFOLIO</a></li>
-          <li><a class="bullet" href="#">ABOUT</a></li>
-          <li><a class="bullet" href="#">CONTACT</a></li>
+          <li class="active-nav"><a href="#">HOME</a></li>
+          <li><a class="bullet" href="#services">SERVICES</a></li>
+          <li><a class="bullet" href="#portfolio">PORTFOLIO</a></li>
+          <li><a class="bullet" href="#about">ABOUT</a></li>
+          <li><a class="bullet" href="#contacts">CONTACT</a></li>
         </ul>
       </nav>
     </header>
-    <div class="slider">
-      <div class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
-      <div class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
-      <div class="slider__left-button"></div>
-      <div class="slider__right-button"></div>
+    <div class="slider-container">
+      <div id='1' style="left: 0px;" class="slider sl">
+        <div name='first-slide' class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
+        <div name='first-slide' class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
+      </div>
+      <span class="slider__left-button"></span>
+      <span class="slider__right-button"></span>
     </div>
-    <section class="services">
+    <section class="services" id="services">
       <h2 class="services__article">Our Services</h2>
       <div class="services__description">Fusce dapibus, tellus ac cursus commodo, 
         tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
         eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
-      <div class="layout-3-column wrap">
-        <div class="service">
-          <div class="service__icon"><img src="./assets/img/pen.png" alt="pen img"></div>
+        <div class="layout-3-column wrap">
+          <div class="service">
+            <div class="service__icon"><img src="./assets/img/pen.png" alt="pen img"></div>
           <div class="service__description">
             <div>Custom Design</div>
             <span>Curabitur vestibulum eget mauris quis laoreet.Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</span>
@@ -86,7 +89,7 @@
     </section>
   </div>
   <div class="wrapper">
-    <section class='portfolio'>
+    <section id='portfolio' class='portfolio'>
       <h2 class='portfolio__article'>Portfolio</h2>
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, 
       eget lacinia odio sem nec elit.</p>
@@ -98,7 +101,7 @@
           <li class="link last-element">Artwork</li>
         </ul>
       </div>
-      <div class="layout-4-column">
+      <div class="layout-4-column pictures-container">
         <img src="./assets/img2/portfolio-image1.png" alt="ship image">
         <img src="./assets/img2/portfolio-image2.png" alt="girl with ice cream image">
         <img src="./assets/img2/portfolio-image3.png" alt="painted city image">
@@ -113,7 +116,7 @@
         <img src="./assets/img2/portfolio-image12.png" alt="design image">
       </div>  
     </section>
-    <section class="about-us">
+    <section id='about' class="about-us">
       <h2 class='about-us__article'>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
         Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. 
@@ -156,16 +159,16 @@
     </section>
   </div>
   <div class="wrapper">
-    <section class="contacts">
+    <section id="contacts" class="contacts">
       <h2>Get a Quote</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="contacts-column">
         <form class="contacts-column__form" method="POST">
           <input type="text" placeholder="Name (Required)" required>
           <input type="email" placeholder="Email (Required)" required>
-          <input type="text" placeholder="Subject">
-          <textarea class='textarea' name="text" placeholder="Describe your project in detail..." id="text" cols="30" rows="12"></textarea>
-          <button type="submit" formmethod="POST">SUBMIT</button>
+          <input type="text" name='article' placeholder="Subject">
+          <textarea class="textarea" name="text" placeholder="Describe your project in detail..." id="text" cols="30" rows="12"></textarea>
+          <button class='btn' type="submit" formmethod="POST">SUBMIT</button>
         </form>
         <div class="contacts-column__information">
           <h3>Contact Information</h3>
@@ -187,6 +190,10 @@
         </div>
       </div>
     </footer>
+    <div id='2' style="left: 0px; display: none" class="slider sl">
+      <div name='first-slide' class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
+      <div name='first-slide' class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
+    </div>
   </div>
 </body>
 </html>
