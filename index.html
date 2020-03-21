@@ -10,6 +10,7 @@
   </head>
 <body>
   <div class="wrapper">
+    <div class='header-hidden-block'></div>
     <header class="header">
       <div class="header__logo">
         <h1 class="logo">SINGOLO</h1>
@@ -26,8 +27,8 @@
     </header>
     <div class="slider-container">
       <div id='1' style="left: 0px;" class="slider sl">
-        <div name='first-slide' class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
-        <div name='first-slide' class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
+        <div class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
+        <div class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
       </div>
       <span class="slider__left-button"></span>
       <span class="slider__right-button"></span>
@@ -167,7 +168,7 @@
           <input type="text" placeholder="Name (Required)" required>
           <input type="email" placeholder="Email (Required)" required>
           <input type="text" name='article' placeholder="Subject">
-          <textarea class="textarea" name="text" placeholder="Describe your project in detail..." id="text" cols="30" rows="12"></textarea>
+          <textarea class="textarea" name="text" placeholder="Describe your project in detail..." maxlength="500" id="text" cols="30" rows="12"></textarea>
           <button class='btn' type="submit" formmethod="POST">SUBMIT</button>
         </form>
         <div class="contacts-column__information">
@@ -191,8 +192,8 @@
       </div>
     </footer>
     <div id='2' style="left: 0px; display: none" class="slider sl">
-      <div name='first-slide' class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
-      <div name='first-slide' class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
+      <div class="slider__iphone-vertical"><img src="./assets/img/iPhone-Vertical.png" alt="phone img"></div>
+      <div class="slider__iphone-horizontal"><img src="./assets/img/iPhone-Horizontal.png" alt="phone img"></div>
     </div>
   </div>
 </body>

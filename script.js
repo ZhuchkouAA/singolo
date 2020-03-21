@@ -1,20 +1,28 @@
 addEventListener('DOMContentLoaded', function() {
     // active class header links
     let nav = document.querySelector('.navigation').children;
-    for (let i = 0; i < nav.length; i++) {
-        let link = nav[i].querySelector('a')
-        link.addEventListener('click', addActiveClass)
-    }
-
-    function addActiveClass() {
-        let li = event.target.parentNode;
     
-        for (let j = 0; j < nav.length; j++) {
-            nav[j].classList.remove('active-nav');
+    window.addEventListener('scroll', () => {
+        for (let i = 0; i < nav.length; i++) {
+                    nav[i].classList.remove('active-nav');
+                }
+        console.log(pageYOffset)
+        if (pageYOffset >= 0 && pageYOffset < 600) {
+            nav[0].classList.add('active-nav')
         }
-    
-        li.classList.add('active-nav')
-    }
+        if (pageYOffset >= 600 && pageYOffset < 1100) {
+            nav[1].classList.add('active-nav')
+        }
+        if (pageYOffset >= 1100 && pageYOffset < 1965) {
+            nav[2].classList.add('active-nav')
+        }
+        if (pageYOffset >= 1965 && pageYOffset < 2670) {
+            nav[3].classList.add('active-nav')
+        }
+        if (pageYOffset >= 2670) {
+            nav[4].classList.add('active-nav')
+        }
+    })
 
 
 
@@ -183,12 +191,6 @@ addEventListener('DOMContentLoaded', function() {
     let imagesContainer = document.querySelector('.pictures-container');
     let images = imagesContainer.children;
 
-    ( () => {
-    for( let i = 0; i < images.length; i++) {
-        images[i].style.order = i + 1;
-    }}
-    )()
-
     let tabs = document.querySelector('.portfolio__list');
     tabs.addEventListener('click', pictureSwitching)
     
@@ -201,13 +203,19 @@ addEventListener('DOMContentLoaded', function() {
                 li.classList.remove('selected');
             });
             event.target.classList.add('selected');
-        for (let i = 0; i < images.length; i++) {
-            let temp = +images[i].style.order;
-            images[i].style.order = temp + 1;
-            if (images[i].style.order > 12) images[i].style.order = 1 ;
-        }
-    }
+
+            let arrPictures = [...images];
+            while (imagesContainer.firstChild) {
+                imagesContainer.removeChild(imagesContainer.firstChild);
+            }
+            for ( let i = 0; i < arrPictures.length; i++) {
+                (i === 11) ? imagesContainer.prepend(arrPictures[i]) : imagesContainer.append(arrPictures[i]);
+            }
+
+            }
 }
+
+    
 
     imagesContainer.addEventListener('click', setBorderToPicture);
     

@@ -9,10 +9,18 @@
   margin: 0 auto;
 }
 
+.header-hidden-block {
+  height: 90px;
+}
+
 .header {
   display: flex;
+  position: fixed;
+  z-index: 10;
+  top: 0;
 
   height: 90px;
+  width: 940px;
   padding: 0 40px;
 
   border-bottom: 6px solid #323746;
@@ -667,6 +675,14 @@
   justify-content: space-around;
   flex-direction: column;
   color: #f0d8d9;
+}
+
+.modal span:nth-child(3) {
+  max-width: 300px;
+  height: 55px;
+  word-wrap: break-word;
+  overflow: hidden;
+
 }
 
 .modal-btn {
