@@ -66,26 +66,26 @@ addEventListener('DOMContentLoaded', function() {
     function createRightRed() {
         let firstSlideRight = firstSlide.cloneNode(true);
         firstSlideRight.style.position = 'absolute';
-        firstSlideRight.style.left = '1020px';
-        firstSlideRight.style.display = 'block';
+        firstSlideRight.style.left = '100%';
+        firstSlideRight.style.display = 'flex';
         sliderContainer.append(firstSlideRight);
     }
     function createLeftRed() {
         let firstSlideLeft = firstSlide.cloneNode(true);
         firstSlideLeft.style.position = 'absolute';
-        firstSlideLeft.style.left = '-1020px';
-        firstSlideLeft.style.display = 'block';
+        firstSlideLeft.style.left = '-100%';
+        firstSlideLeft.style.display = 'flex';
         sliderContainer.append(firstSlideLeft);
     }
     function createLeftBlue() {
         let secondSlideLeft = secondSlide.cloneNode(true);
-        secondSlideLeft.style.left = '-1020px';
+        secondSlideLeft.style.left = '-100%';
         secondSlideLeft.style.top = '0px';
         sliderContainer.append(secondSlideLeft)
     }
     function createRightBlue() {
         let secondSlideRight = secondSlide.cloneNode(true);
-        secondSlideRight.style.left = '1020px';
+        secondSlideRight.style.left = '100%';
         secondSlideRight.style.top = '0px';
         sliderContainer.append(secondSlideRight);
     }
@@ -95,7 +95,7 @@ addEventListener('DOMContentLoaded', function() {
     }
     function createCenterRed() {
         let firstSlideCenter = firstSlide.cloneNode(true);
-        firstSlideCenter.style.display = 'block';
+        firstSlideCenter.style.display = 'flex';
         sliderContainer.prepend(firstSlideCenter);
         addEvent();
     }
@@ -106,8 +106,8 @@ addEventListener('DOMContentLoaded', function() {
     turnRight.addEventListener('click', function() {
         let sliders = document.querySelectorAll('.sl')
                 if (flag === 1) {
-                sliders[0].style.transform = 'translateX(1020px)';
-                sliders[1].style.transform = 'translateX(1020px)';
+                sliders[0].style.transform = 'translateX(100%)';
+                sliders[1].style.transform = 'translateX(100%)';
                 flag = 0;
                 turnRight.style.display = 'none';
                 turnLeft.style.display = 'none';
@@ -124,8 +124,8 @@ addEventListener('DOMContentLoaded', function() {
                 return
             }
                 if (flag === 0) {
-                    sliders[0].style.transform = 'translateX(1020px)';
-                    sliders[1].style.transform = 'translateX(1020px)';
+                    sliders[0].style.transform = 'translateX(100%)';
+                    sliders[1].style.transform = 'translateX(100%)';
                     flag = 1;
                     turnRight.style.display = 'none';
                     turnLeft.style.display = 'none';
@@ -146,8 +146,8 @@ addEventListener('DOMContentLoaded', function() {
     turnLeft.addEventListener('click', function() {
         let sliders = document.querySelectorAll('.sl')
                 if (flag === 1) {
-                sliders[0].style.transform = 'translateX(-1020px)';
-                sliders[2].style.transform = 'translateX(-1020px)';
+                sliders[0].style.transform = 'translateX(-100%)';
+                sliders[2].style.transform = 'translateX(-100%)';
                 flag = 0;
                 turnRight.style.display = 'none';
                 turnLeft.style.display = 'none';
@@ -164,8 +164,8 @@ addEventListener('DOMContentLoaded', function() {
                 return
             }
                 if (flag === 0) {
-                    sliders[0].style.transform = 'translateX(-1020px)';
-                    sliders[2].style.transform = 'translateX(-1020px)';
+                    sliders[0].style.transform = 'translateX(-100%)';
+                    sliders[2].style.transform = 'translateX(-100%)';
                     flag = 1;
                     turnRight.style.display = 'none';
                     turnLeft.style.display = 'none';
