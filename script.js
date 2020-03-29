@@ -6,23 +6,76 @@ addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < nav.length; i++) {
                     nav[i].classList.remove('active-nav');
                 }
-        console.log(pageYOffset)
-        if (pageYOffset >= 0 && pageYOffset < 600) {
-            nav[0].classList.add('active-nav')
+                console.log(pageYOffset)
+        // console.log(document.documentElement.clientWidth)
+        
+        if (document.documentElement.clientWidth > 900) {
+            if (pageYOffset >= 0 && pageYOffset < 600) {
+                nav[0].classList.add('active-nav')
+            }
+            if (pageYOffset >= 600 && pageYOffset < 1100) {
+                nav[1].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1100 && pageYOffset < 1965) {
+                nav[2].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1965 && pageYOffset < 2670) {
+                nav[3].classList.add('active-nav')
+            }
+            if (pageYOffset >= 2670) {
+                nav[4].classList.add('active-nav')
+            }
+        } else if (document.documentElement.clientWidth > 700) {
+            if (pageYOffset >= 0 && pageYOffset < 465) {
+                nav[0].classList.add('active-nav')
+            }
+            if (pageYOffset >= 465 && pageYOffset < 1100) {
+                nav[1].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1100 && pageYOffset < 1800) {
+                nav[2].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1800 && pageYOffset < 2500) {
+                nav[3].classList.add('active-nav')
+            }
+            if (pageYOffset >= 2500) {
+                nav[4].classList.add('active-nav')
+            }
+        } else if(document.documentElement.clientWidth > 470) {
+            if (pageYOffset >= 0 && pageYOffset < 350) {
+                nav[0].classList.add('active-nav')
+            }
+            if (pageYOffset >= 350 && pageYOffset < 1250) {
+                nav[1].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1250 && pageYOffset < 2777) {
+                nav[2].classList.add('active-nav')
+            }
+            if (pageYOffset >= 2777 && pageYOffset < 4437) {
+                nav[3].classList.add('active-nav')
+            }
+            if (pageYOffset >= 4437) {
+                nav[4].classList.add('active-nav')
+            }
+        } else {
+            if (pageYOffset >= 0 && pageYOffset < 180) {
+                nav[0].classList.add('active-nav')
+            }
+            if (pageYOffset >= 180 && pageYOffset < 1300) {
+                nav[1].classList.add('active-nav')
+            }
+            if (pageYOffset >= 1300 && pageYOffset < 2100) {
+                nav[2].classList.add('active-nav')
+            }
+            if (pageYOffset >= 2100 && pageYOffset < 3700) {
+                nav[3].classList.add('active-nav')
+            }
+            if (pageYOffset >= 3700) {
+                nav[4].classList.add('active-nav')
         }
-        if (pageYOffset >= 600 && pageYOffset < 1100) {
-            nav[1].classList.add('active-nav')
-        }
-        if (pageYOffset >= 1100 && pageYOffset < 1965) {
-            nav[2].classList.add('active-nav')
-        }
-        if (pageYOffset >= 1965 && pageYOffset < 2670) {
-            nav[3].classList.add('active-nav')
-        }
-        if (pageYOffset >= 2670) {
-            nav[4].classList.add('active-nav')
-        }
-    })
+        
+    }
+})
 
 
 
@@ -66,26 +119,26 @@ addEventListener('DOMContentLoaded', function() {
     function createRightRed() {
         let firstSlideRight = firstSlide.cloneNode(true);
         firstSlideRight.style.position = 'absolute';
-        firstSlideRight.style.left = '100%';
+        firstSlideRight.style.left = '-100%';
         firstSlideRight.style.display = 'flex';
         sliderContainer.append(firstSlideRight);
     }
     function createLeftRed() {
         let firstSlideLeft = firstSlide.cloneNode(true);
         firstSlideLeft.style.position = 'absolute';
-        firstSlideLeft.style.left = '-100%';
+        firstSlideLeft.style.left = '100%';
         firstSlideLeft.style.display = 'flex';
         sliderContainer.append(firstSlideLeft);
     }
     function createLeftBlue() {
         let secondSlideLeft = secondSlide.cloneNode(true);
-        secondSlideLeft.style.left = '-100%';
+        secondSlideLeft.style.left = '100%';
         secondSlideLeft.style.top = '0px';
         sliderContainer.append(secondSlideLeft)
     }
     function createRightBlue() {
         let secondSlideRight = secondSlide.cloneNode(true);
-        secondSlideRight.style.left = '100%';
+        secondSlideRight.style.left = '-100%';
         secondSlideRight.style.top = '0px';
         sliderContainer.append(secondSlideRight);
     }
@@ -106,8 +159,8 @@ addEventListener('DOMContentLoaded', function() {
     turnRight.addEventListener('click', function() {
         let sliders = document.querySelectorAll('.sl')
                 if (flag === 1) {
-                sliders[0].style.transform = 'translateX(100%)';
-                sliders[1].style.transform = 'translateX(100%)';
+                sliders[0].style.transform = 'translateX(-100%)';
+                sliders[1].style.transform = 'translateX(-100%)';
                 flag = 0;
                 turnRight.style.display = 'none';
                 turnLeft.style.display = 'none';
@@ -124,8 +177,8 @@ addEventListener('DOMContentLoaded', function() {
                 return
             }
                 if (flag === 0) {
-                    sliders[0].style.transform = 'translateX(100%)';
-                    sliders[1].style.transform = 'translateX(100%)';
+                    sliders[0].style.transform = 'translateX(-100%)';
+                    sliders[1].style.transform = 'translateX(-100%)';
                     flag = 1;
                     turnRight.style.display = 'none';
                     turnLeft.style.display = 'none';
@@ -146,8 +199,8 @@ addEventListener('DOMContentLoaded', function() {
     turnLeft.addEventListener('click', function() {
         let sliders = document.querySelectorAll('.sl')
                 if (flag === 1) {
-                sliders[0].style.transform = 'translateX(-100%)';
-                sliders[2].style.transform = 'translateX(-100%)';
+                sliders[0].style.transform = 'translateX(100%)';
+                sliders[2].style.transform = 'translateX(100%)';
                 flag = 0;
                 turnRight.style.display = 'none';
                 turnLeft.style.display = 'none';
@@ -164,8 +217,8 @@ addEventListener('DOMContentLoaded', function() {
                 return
             }
                 if (flag === 0) {
-                    sliders[0].style.transform = 'translateX(-100%)';
-                    sliders[2].style.transform = 'translateX(-100%)';
+                    sliders[0].style.transform = 'translateX(100%)';
+                    sliders[2].style.transform = 'translateX(100%)';
                     flag = 1;
                     turnRight.style.display = 'none';
                     turnLeft.style.display = 'none';
@@ -277,6 +330,25 @@ addEventListener('DOMContentLoaded', function() {
         }
     })
 
+
+    document.querySelector('.burger').addEventListener('click', (e) => {
+        document.querySelector('.header__navigation').classList.toggle('header__navigation-active');
+        document.querySelector('.burger').classList.toggle('active-burger');
+        if (document.documentElement.clientWidth < 400) document.querySelector('.logo').classList.toggle('active-logo');
+        document.querySelector('.header__navigation').addEventListener('click', closeMenu);
+        document.body.classList.toggle('overflow-hidden');
+        function closeMenu() {
+            if (event.target.classList.contains('close-menu')) {
+                document.querySelector('.burger').classList.toggle('active-burger');
+                document.querySelector('.header__navigation').classList.toggle('header__navigation-active');
+                if (document.documentElement.clientWidth < 400) document.querySelector('.logo').classList.toggle('active-logo');
+                document.body.classList.toggle('overflow-hidden');
+                document.querySelector('.header__navigation').removeEventListener('click', closeMenu);
+
+                
+            }
+        }
+    })
 
 
     
