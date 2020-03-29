@@ -6,8 +6,6 @@ addEventListener('DOMContentLoaded', function() {
         for (let i = 0; i < nav.length; i++) {
                     nav[i].classList.remove('active-nav');
                 }
-                console.log(pageYOffset)
-        // console.log(document.documentElement.clientWidth)
         
         if (document.documentElement.clientWidth > 900) {
             if (pageYOffset >= 0 && pageYOffset < 600) {
