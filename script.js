@@ -333,6 +333,7 @@ addEventListener('DOMContentLoaded', function() {
         document.querySelector('.header__navigation').classList.toggle('header__navigation-active');
         document.querySelector('.burger').classList.toggle('active-burger');
         if (document.documentElement.clientWidth < 400) document.querySelector('.logo').classList.toggle('active-logo');
+        createShadow()
         document.querySelector('.header__navigation').addEventListener('click', closeMenu);
         document.body.classList.toggle('overflow-hidden');
         function closeMenu() {
@@ -340,13 +341,24 @@ addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.burger').classList.toggle('active-burger');
                 document.querySelector('.header__navigation').classList.toggle('header__navigation-active');
                 if (document.documentElement.clientWidth < 400) document.querySelector('.logo').classList.toggle('active-logo');
+                createShadow();
                 document.body.classList.toggle('overflow-hidden');
                 document.querySelector('.header__navigation').removeEventListener('click', closeMenu);
 
-                
             }
         }
-    })
+    });
+
+    function createShadow() {
+        if (document.querySelector('.shadow')) {
+            document.querySelector('.shadow').remove();
+        } else {
+        let shadow = document.createElement('div');
+        shadow.classList.add('shadow');
+        document.body.append(shadow);
+        }
+       
+    }
 
 
     

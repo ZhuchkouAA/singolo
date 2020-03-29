@@ -861,6 +861,7 @@
     flex-direction: column;
 
     padding-left: 40px;
+    padding-top: 0;
   }
 
   .navigation li {
@@ -883,6 +884,7 @@
     display: block;
 
     transition: all ease 0.6s;
+    cursor: pointer;
   }
 
   .active-burger {
@@ -900,6 +902,17 @@
   .active-logo {
     transform: translate(-16vw);
   }  
+
+  .shadow {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    left: 0;
+  }
+
 }
 
 @media (max-width: 740px) {
